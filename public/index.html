@@ -1,29 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <meta charset="utf-8">
+    <title>DRIP - Drecom Invention Project</title>
+    <meta name="description" content="DRIP - Drecom Invention Project は、(株)ドリコムの「発明を産み続ける」という挑戦に取り組む活動です。">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-76789833-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    <link href="./index.css" rel="stylesheet">
+    <script src="//assets.peraichi.com/js/const_common.js"></script>
+    <script src="//assets.peraichi.com/js/const_production.js"></script>
+    <script src="//webfont.fontplus.jp/accessor/script/fontplus.js?5qoPx6QyJ8k%3D&aa=1" charset="utf-8"></script>
+    <script src="//static.quant.jp/lait.js" data-lait="on" data-sid="2bad96c669fe37b88a24137c4092b472" data-tag-version="1.0.0" defer async></script>
+    <link rel="icon" href="./icon.png">
+    <meta name="google-site-verification" content="DiVJITwzspckWL-55HV3XHXgyJMVab7I2wQGy_OUokM">
+    <meta property="og:image" content="img/logo.png">
+    <meta property="og:url" content="http://drip.drecom.co.jp">
+    <meta property="og:title" content="DRIP - Drecom Invention Project">
+    <meta property="og:site_name" content="DRIP">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="DRIP - Drecom Invention Projectは、(株)ドリコムの「発明を産み続ける」という挑戦に取り組む活動です。">
+    <link rel="stylesheet" href="./style.css">
+    <link rel=preload as=image href="../img/naito-ani.gif" media="screen and (min-width: 770px)">
+    <link rel=preload as=image href="../img/neco-ani.gif" media="screen and (min-width: 770px)">
+    <link rel=preload as=image href="../img/mega-ani.gif" media="screen and (min-width: 770px)">
+    <link rel=preload as=image href="../img/police-ani.gif" media="screen and (min-width: 770px)">
+    <link rel=preload as=image href="../img/master-ani.gif" media="screen and (min-width: 770px)">
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+    <script>
+      $(function() {
+        $('#section-17 .e_btn').append(
+                '<p class="e_btn_android"><a href="https://play.google.com/store/apps/details?id=jp.co.drecom.pass&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1" class="btn btn-primary pera1-editable pera1-removable" target="_blank">button</a></p>'
+        );
+      });
+    </script>
+    <script type="text/javascript" src="js/lazysizes.min.js"></script>
+    <script type="text/javascript" src="js/lazyLoad.js"></script>
+    <script type="text/javascript" src="js/peraichi_setting.js"></script>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <script id="dataPtengineScript" type="text/javascript" data-id="4e9b0eea">
+    window._pt_lt = new Date().getTime();
+    window._pt_sp_2 = [];
+    _pt_sp_2.push('setAccount,4e9b0eea');
+    const _protocol = (("https:" === document.location.protocol) ? " https://" : " http://");
+    (function() {
+      const atag = document.createElement('script');
+      atag.type = 'text/javascript';
+      atag.async = true;
+      atag.src = _protocol + 'js.ptengine.jp/pta.js';
+      const stag = document.createElement('script');
+      stag.type = 'text/javascript';
+      stag.async = true;
+      stag.src = _protocol + 'js.ptengine.jp/pts.js';
+      const s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(atag, s);
+      s.parentNode.insertBefore(stag, s);
+    })();
+  </script>
+
+  <div id="root"></div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
