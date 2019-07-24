@@ -1,8 +1,6 @@
 import React from 'react';
 import './App.scss';
-import { BrowserRouter, Route, Link } from 'react-router-dom';
-
-import Header from './components/Header'
+import { BrowserRouter, Route } from 'react-router-dom';
 
 function App() {
   return (
