@@ -1,16 +1,16 @@
 import React from 'react';
 import './App.scss';
-import { BrowserRouter, Route } from 'react-router-dom';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <div>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <Switch>
           <Route exact path='/' component={Home} />
           <Route path='/about' component={About} />
           <Route path='/friends' component={Friends} />
-        </div>
+        </Switch>
       </BrowserRouter>
     </div>
   )

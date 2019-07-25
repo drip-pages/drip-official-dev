@@ -4,6 +4,7 @@
   "homepage": "https://drip-pages.github.io/drip-official-dev/",
   "private": true,
   "dependencies": {
+    "@types/node": "^12.6.8",
     "lodash": "4.17.14",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
