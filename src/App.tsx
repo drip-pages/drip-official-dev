@@ -1,17 +1,25 @@
 import React from 'react';
 import './App.scss';
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import {HashRouter, Switch, Route, Link} from 'react-router-dom';
+import Header from "./components/Header";
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
-        <Switch>
-          <Route exact path='/' component={Home} />
-          <Route path='/about' component={About} />
-          <Route path='/friends' component={Friends} />
-        </Switch>
-      </BrowserRouter>
+        <HashRouter basename={process.env.PUBLIC_URL}>
+            <div>
+                <ul>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/about">About</Link></li>
+                </ul>
+                <hr />
+                <Switch>
+                    <Route exact path='/' component={Home} />
+                    <Route path='/about' component={About} />
+                    <Route component={PageNotFound} />
+                </Switch>
+            </div>
+        </HashRouter>
     </div>
   )
 }
@@ -24,6 +32,7 @@ const Home = () => (
         <p>
             Welcome Home.
         </p>
+        <Header />
     </div>
 )
 
@@ -34,10 +43,10 @@ const About = () => (
     </div>
 )
 
-const Friends = () => (
+const PageNotFound = () => (
     <div>
-        <h2>Friends</h2>
-        <p>ここにフレンズのリストを書きます</p>
+        <h2>Page not found</h2>
+        <p>the path {window.location.pathname} did not match any React Router routes.</p>
     </div>
 )
 

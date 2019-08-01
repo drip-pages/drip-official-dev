@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Single Page Apps for GitHub Pages</title>
+    <script type="text/javascript">
+        const segmentCount = 0;
+
+        const _location = window.location
+        _location.replace(
+            _location.protocol
+            + '//' + _location.hostname
+            + (_location.port ? ':' + _location.port : '')
+            + _location.pathname.split('/').slice(0, 1 + segmentCount).join('/') + '/?p=/'
+            + _location.pathname.slice(1).split('/').slice(segmentCount).join('/').replace(/&/g, '~and~')
+            + (_location.search ? '&q=' + _location.search.slice(1).replace(/&/g, '~and~') : '')
+            + _location.hash
+        )
+    </script>
+</head>
+</html>
