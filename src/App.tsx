@@ -7,18 +7,11 @@ function App() {
   return (
     <div className="App">
         <HashRouter basename={process.env.PUBLIC_URL}>
-            <div>
-                <ul>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/about">About</Link></li>
-                </ul>
-                <hr />
-                <Switch>
-                    <Route exact path='/' component={Home} />
-                    <Route path='/about' component={About} />
-                    <Route component={PageNotFound} />
-                </Switch>
-            </div>
+            <Switch>
+                <Route exact path='/' component={Home} />
+                <Route path='/about' component={About} />
+                <Route component={PageNotFound} />
+            </Switch>
         </HashRouter>
     </div>
   )
