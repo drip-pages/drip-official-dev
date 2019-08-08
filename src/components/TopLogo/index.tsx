@@ -1,5 +1,6 @@
 import topLogo from "../../img/logo2.png";
 import * as React from "react";
+import './TopLogo.scss'
 
 const TopLogo = () => (
     <div className="TopLogo">
