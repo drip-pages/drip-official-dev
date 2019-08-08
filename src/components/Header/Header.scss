@@ -1,39 +1,41 @@
 @import "../../utils/vars.scss";
 
 .Header {
+  position: sticky;
+  top: 0;
+  background-color: $colorWhite;
+  box-shadow: 0 1px 1px $colorShadow;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-  .fixed-area {
-    // TODO fixedの対処ができない。一度外しておく
-    //position: fixed;
+  .header-logo {
+    max-width: 500px;
+    margin-left: 20px;
+  }
+
+  .menu-area {
+    margin-right: 20px;
+    .native-button {
+      display: none;
+    }
+    .no-native-buttons {
+
+    }
+  }
+
+  @media (max-width: $deviceWidth) {
     .header-logo {
-      max-width: 500px;
-      margin: 0 20px;
+      max-width: 300px;
     }
 
     .menu-area {
-      float: right;
-      margin-top: 10px;
       .native-button {
-        display: none;
+        display: inline;
       }
+
       .no-native-buttons {
-
-      }
-    }
-
-    @media (max-width: $deviceWidth) {
-      .header-logo {
-        max-width: 300px;
-      }
-
-      .menu-area {
-        .native-button {
-          display: inline;
-        }
-
-        .no-native-buttons {
-          display: none;
-        }
+        display: none;
       }
     }
   }
