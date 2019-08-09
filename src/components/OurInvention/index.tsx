@@ -6,14 +6,17 @@ import pillarsBigLogo from '../../img/6-pillars.png'
 import pillarsSmallLogo from '../../img/pillarsSmall.png'
 import loveChainBigLogo from '../../img/lovechain.png'
 import loveCahinSmallLogo from '../../img/loveChainSmallLogo.png'
+import './OurInvention.scss'
 
 const OurInvention = () => {
     return (
         <div className="OurInvention">
-            <h2>
-                Our invention
-            </h2>
-            <Invention bigLogo={arowBigLogo} smallLogo={arowSmallLogo}>
+            <div className="our-invention-title-area">
+                <h2>
+                    Our invention
+                </h2>
+            </div>
+            <Invention className="arow" bigLogo={arowBigLogo} smallLogo={arowSmallLogo}>
                 <p>
                     3DリアルマップとPOIデータを活用し
                 </p>
@@ -24,7 +27,7 @@ const OurInvention = () => {
                     https://arow.world/
                 </a>
             </Invention>
-            <Invention bigLogo={pillarsBigLogo} smallLogo={pillarsSmallLogo}>
+            <Invention className="pillars" bigLogo={pillarsBigLogo} smallLogo={pillarsSmallLogo}>
                 <p>
                     DAppsをまたいで利用可能なトークンを、誰でも生成できるERC721拡張スマートコントラクト
                 </p>
@@ -32,7 +35,7 @@ const OurInvention = () => {
                     https://6-pillars.ooo/
                 </a>
             </Invention>
-            <Invention bigLogo={loveChainBigLogo} smallLogo={loveCahinSmallLogo}>
+            <Invention className="loveChain" bigLogo={loveChainBigLogo} smallLogo={loveCahinSmallLogo}>
                 <strong>
                     ブロックチェーン上に2人だけのメッセージを永遠に残すサービスです。
                 </strong>

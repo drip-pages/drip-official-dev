@@ -1,11 +1,14 @@
 import * as React from 'react'
+import './Member.scss'
+import classNames from 'classnames'
 
 type MemberProps = {
     imgFile: string
-    name: string,
+    name: string
+    className?: string,
 }
 const Member = (props: MemberProps) => (
-    <div className="Member">
+    <div className={classNames('Member', props.className)}>
         <img className="member-image" src={props.imgFile} alt="member" />
         <p>
             { props.name }

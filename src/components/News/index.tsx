@@ -1,11 +1,13 @@
 import * as React from "react";
 import {Link} from "react-router-dom";
+import './News.scss'
 
 const News = () => (
     <div className="News">
         <h2>
             News
         </h2>
+        <div className="content">
         <ul>
             <li>
                 2019/04/24 <strong>AROW</strong>
@@ -15,7 +17,8 @@ const News = () => (
                 </a>
             </li>
         </ul>
-        <Link to="/news">Read More...</Link>
+        </div>
+        <Link className="read-more" to="/news">Read More...</Link>
     </div>
 )
 

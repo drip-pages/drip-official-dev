@@ -1,0 +1,15 @@
+.Invention {
+  display: flex;
+  .content-left {
+    width: 50vw;
+  }
+  .content-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50vw;
+    padding: 100px 100px 100px 10px;
+    font-size: 20px;
+  }
+
+}

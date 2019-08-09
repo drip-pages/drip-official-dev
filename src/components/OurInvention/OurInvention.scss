@@ -1,0 +1,26 @@
+@import "../../utils/vars.scss";
+
+.OurInvention {
+  .our-invention-title-area {
+    padding: 30px 0;
+    background-color: $colorGray
+  }
+
+  .arow {
+    background-color: $colorBlack;
+    color: $colorWhite;
+  }
+
+  .pillars {
+    background-image: url("../../img/6-pillars_background.png");
+    background-size: cover;
+  }
+
+  .loveChain {
+    background-color: #e18c84;
+    color: $colorWhite;
+    a {
+      color: $colorWhite;
+    }
+  }
+}
