@@ -6,6 +6,8 @@ import pay from '../../img/mega.jpg'
 import neco from '../../img/neco.jpg'
 import ogw from '../../img/police.png'
 import './Team.scss'
+import pieer from '../../img/pieer.jpg'
+import tk from '../../img/tk.jpeg'
 
 const Team = () => (
     <div className="Team">
@@ -21,6 +23,8 @@ const Team = () => (
             <Member className="member-icon" imgFile={neco} name="Director" />
             <Member className="member-icon" imgFile={ogw} name="Engineer" />
             <Member className="member-icon" imgFile={master} name="Master" />
+            <Member className="member-icon" imgFile={pieer} name="Engineer & Planner" />
+            <Member className="member-icon" imgFile={tk} name="Engineer" />
         </div>
     </div>
 )

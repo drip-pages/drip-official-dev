@@ -1,11 +1,17 @@
 .ContactUs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   .contents {
     font-size: 20px;
-    margin: auto;
 
     .label {
       display: inline-block;
       width: 8em;
     }
+  }
+
+  .contact-button {
+    width: auto;
   }
 }

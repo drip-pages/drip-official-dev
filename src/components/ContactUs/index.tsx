@@ -21,7 +21,7 @@ const ContactUs = () => (
             : 我こそは！と思う熱気にあふれた若者を待っています！<br />
             <br/>
         </div>
-        <button className="contuct-button">
+        <button className="contact-button">
             お問い合わせ
         </button>
     </div>
