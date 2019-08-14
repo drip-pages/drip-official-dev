@@ -3,6 +3,8 @@ import headerLogo from '../../img/navi.png'
 import './Header.scss'
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
+import classNames from "classnames";
+import {Link} from "react-router-dom";
 
 type HeaderState = {
     showMenu: boolean,
@@ -18,37 +20,65 @@ class Header extends React.Component<{}, HeaderState> {
         this.state.showMenu ? this.setState({ showMenu: false },) : this.setState({ showMenu: true })
     }
 
-    handleChange = (event: React.ChangeEvent<{}>, newValue: number) =>{
-        this.setState({
-            value: newValue,
-        })
-        console.log(`newValue ${newValue}`)
+    handleNewsButton = () => {
+
+    }
+
+    handleCompanyButton = () => {
+
+    }
+
+    handleContactButton = () => {
+
+    }
+
+    handleEnglishButton = () => {
+
     }
 
     render() {
         return (
             <div className="Header">
-                <img alt="DRECOM INVENTION PROJECT" src={headerLogo} className="header-logo" />
-                <span className="menu-area">
-                    <span className="native-button">
-                        <button onClick={this.handleMenuButton}>
-                            メニューボタン
-                        </button>
+                <div className="header-area">
+                    <Link to="/">
+                        <img alt="DRECOM INVENTION PROJECT" src={headerLogo} className="header-logo"/>
+                    </Link>
+                    <span className="menu-area">
+                        <span className="native-button">
+                            <button onClick={this.handleMenuButton}>
+                                三
+                            </button>
+                        </span>
+                        <span className="non-native-buttons">
+                            <Link to="/news">
+                                <button> News </button>
+                            </Link>
+                            <a href="https://www.drecom.co.jp/company/" target="_blank" rel="noopener noreferrer">
+                                <button onClick={this.handleCompanyButton}> Company </button>
+                            </a>
+                            <a href="https://goo.gl/forms/my00T6ZbZK" target="_blank" rel="noopener noreferrer">
+                                <button onClick={this.handleContactButton}> Contact </button>
+                            </a>
+                            <Link to="/English-Home">
+                                <button onClick={this.handleEnglishButton}> English </button>
+                            </Link>
+                        </span>
                     </span>
-                    <Tabs
-                        className="no-native-buttons"
-                        value={this.state.value}
-                        indicatorColor="primary"
-                        textColor="primary"
-                        onChange={this.handleChange}
-                        aria-label="menu"
-                    >
-                        <Tab label="News" />
-                        <Tab label="Company" />
-                        <Tab label="Contact" />
-                        <Tab label="English" />
-                    </Tabs>
-                </span>
+                </div>
+                <ul className={classNames('underMenu', {show: this.state.showMenu})}>
+                    <Link to="/news">
+                        <li>News</li>
+                    </Link>
+                    <a href="https://www.drecom.co.jp/company/" target="_blank" rel="noopener noreferrer">
+                        <li onClick={this.handleCompanyButton}>Company</li>
+                    </a>
+                    <a href="https://goo.gl/forms/my00T6ZbZK" target="_blank" rel="noopener noreferrer">
+                        <li onClick={this.handleContactButton}>Contact</li>
+                    </a>
+                    <Link to="/English-Home">
+                        <li onClick={this.handleEnglishButton}>English</li>
+                    </Link>
+                </ul>
             </div>
         )
     }

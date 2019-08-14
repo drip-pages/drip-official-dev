@@ -9,21 +9,6 @@ import Footer from "./components/Footer";
 import NewsItems from './data/newsItems.json'
 
 function App() {
-    // const newsItems: INewsItem[] = [
-    //     {
-    //         day: '2019/04/24',
-    //         title: 'AROW',
-    //         message: 'AROW Developer Meetup Vol.2 を開催しました！',
-    //         link: 'https://arow-3dmap.connpass.com/event/127377/'
-    //     },
-    //     {
-    //         day: '2019/04/23',
-    //         title: 'AROW',
-    //         message: 'AROW オープンテストバージョンリリースしました！',
-    //         link: 'https://arow.world/ja/'
-    //     }
-    // ]
-
   return (
     <div className="App">
         <HashRouter basename={process.env.PUBLIC_URL}>
