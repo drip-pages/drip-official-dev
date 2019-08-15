@@ -4,7 +4,9 @@ import './TopLogo.scss'
 
 const TopLogo = () => (
     <div className="TopLogo">
-        <img className="top-logo" src={topLogo} alt="top-logo" />
+        <div className="inner">
+            <img className="top-logo" src={topLogo} alt="top-logo" />
+        </div>
         <h1>
             発明の種を産み続ける
         </h1>
