@@ -1,35 +1,13 @@
+@import "../../utils/vars.scss";
 .HurgerButton {
-
-  span, span:before, span:after {
-    display: inline-block;
-    height: 3px;
-    width: 25px;
-    border-radius: 3px;
-    background: #555;
-    content: '';
-    transition: all 0.3s;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-style: solid;
+  border-color: $colorGray;
+  border-width: 2px;
+  border-radius: 2px;
+  svg{
+    transform: scale(0.5)
   }
-
-  span:before {
-    transform: translateY(8px);
-  }
-
-  span:after {
-    transform: translateY(-8px);
-  }
-
-  &.show {
-    span {
-      background: rgba(255, 255, 255, 0);
-    }
-
-    span:before {
-      transform: rotate(-45deg) translateY(0px);
-    }
-
-    span:after {
-      transform: rotate(45deg) translateY(0px);
-    }
-  }
-
 }

@@ -10,8 +10,8 @@
     align-items: center;
 
     .header-logo {
-      max-width: 500px;
-      margin-left: 20px;
+      min-width: 250px;
+      width: 500px;
     }
 
     .menu-area {
@@ -46,7 +46,7 @@
 
     @media (max-width: $deviceWidth) {
       .header-logo {
-        max-width: 300px;
+        width: 500px;
       }
 
       .menu-area {
@@ -91,5 +91,7 @@
       max-height: 1000px;
     }
   }
-
+  .item {
+    color: $colorBlack;
+  }
 }

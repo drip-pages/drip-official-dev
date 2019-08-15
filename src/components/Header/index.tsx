@@ -5,6 +5,7 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import classNames from "classnames";
 import {Link} from "react-router-dom";
+import HurgerButton from "../HurgerButton";
 
 type HeaderState = {
     showMenu: boolean,
@@ -45,38 +46,37 @@ class Header extends React.Component<{}, HeaderState> {
                     </Link>
                     <span className="menu-area">
                         <span className="native-button">
-                            <button onClick={this.handleMenuButton}>
-                                三
-                            </button>
+                            <HurgerButton onClick={this.handleMenuButton} />
                         </span>
+
                         <span className="non-native-buttons">
                             <Link to="/news">
-                                <button> News </button>
+                                <button className="item"> News </button>
                             </Link>
                             <a href="https://www.drecom.co.jp/company/" target="_blank" rel="noopener noreferrer">
-                                <button onClick={this.handleCompanyButton}> Company </button>
+                                <button className="item" onClick={this.handleCompanyButton}> Company </button>
                             </a>
                             <a href="https://goo.gl/forms/my00T6ZbZK" target="_blank" rel="noopener noreferrer">
-                                <button onClick={this.handleContactButton}> Contact </button>
+                                <button className="item" onClick={this.handleContactButton}> Contact </button>
                             </a>
                             <Link to="/English-Home">
-                                <button onClick={this.handleEnglishButton}> English </button>
+                                <button className="item" onClick={this.handleEnglishButton}> English </button>
                             </Link>
                         </span>
                     </span>
                 </div>
                 <ul className={classNames('underMenu', {show: this.state.showMenu})}>
                     <Link to="/news">
-                        <li>News</li>
+                        <li className="item">News</li>
                     </Link>
                     <a href="https://www.drecom.co.jp/company/" target="_blank" rel="noopener noreferrer">
-                        <li onClick={this.handleCompanyButton}>Company</li>
+                        <li className="item" onClick={this.handleCompanyButton}>Company</li>
                     </a>
                     <a href="https://goo.gl/forms/my00T6ZbZK" target="_blank" rel="noopener noreferrer">
-                        <li onClick={this.handleContactButton}>Contact</li>
+                        <li className="item" onClick={this.handleContactButton}>Contact</li>
                     </a>
                     <Link to="/English-Home">
-                        <li onClick={this.handleEnglishButton}>English</li>
+                        <li className="item" onClick={this.handleEnglishButton}>English</li>
                     </Link>
                 </ul>
             </div>

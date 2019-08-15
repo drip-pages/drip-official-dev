@@ -1,6 +1,8 @@
 import React from 'react'
 import classNames from 'classnames'
 import './HurgerButton.scss'
+import {ReactComponent as ThreeLine} from '../../img/threeLine.svg'
+import {ReactComponent as Batsu} from '../../img/batsu.svg'
 
 type HurgerButtonProps = {
     onClick: () => void,
@@ -22,9 +24,13 @@ class HurgerButton extends React.Component<HurgerButtonProps, HurgerButtonState>
     render() {
         const { show } = this.state
         return (
-            <button className={classNames('HurgerButton', {show: show})} onClick={this.handleHurgerButtonClick}>
-                <span>-</span>
-            </button>
+            <span className="HurgerButton" onClick={this.handleHurgerButtonClick}>
+                {show ? (
+                    <Batsu />
+                ) : (
+                    <ThreeLine />
+                )}
+            </span>
         )
     }
 }
