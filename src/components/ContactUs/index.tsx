@@ -10,15 +10,21 @@ const ContactUs = () => (
             <div className="label">
                 Media
             </div>
-            : 取材の申し込み、掲載、どんどん募集しています。<br />
+            <span className="message">
+                取材の申し込み、掲載、どんどん募集しています。<br />
+            </span>
             <div className="label">
                 Partner
             </div>
-            : 何か面白いことを一緒にやりましょう！<br />
+            <span className="message">
+                何か面白いことを一緒にやりましょう！<br />
+            </span>
             <div className="label">
                 Media
             </div>
-            : 我こそは！と思う熱気にあふれた若者を待っています！<br />
+            <span className="message">
+                我こそは！と思う熱気にあふれた若者を待っています！<br />
+            </span>
             <br/>
         </div>
         <button className="contact-button">
