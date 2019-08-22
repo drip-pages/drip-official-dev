@@ -27,9 +27,11 @@ const ContactUs = () => (
             </span>
             <br/>
         </div>
-        <button className="contact-button">
-            お問い合わせ
-        </button>
+        <a href="https://goo.gl/forms/my00T6ZbZK" target="_blank" rel="noopener noreferrer">
+            <button className="contact-button">
+                お問い合わせ
+            </button>
+        </a>
     </div>
 )
 
