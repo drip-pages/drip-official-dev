@@ -1,27 +1,50 @@
 @import "../../utils/vars.scss";
 .Invention {
   display: flex;
-  .content-left {
-    width: 50vw;
+  padding: 50px;
+  .mobile-show-logo {
+    display: none;
+  }
+  .bigLogo {
+    width: 40vw;
+    position: relative;
+    margin: auto;
   }
   .content-right {
+    margin-left: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 50vw;
-    padding: 100px 100px 100px 10px;
+    //padding: 100px 100px 100px 10px;
     font-size: 20px;
+    .smallLogo {
+      display: block;
+      width: 25vw;
+      margin-bottom: 10px;
+    }
   }
 
   @media (max-width: $deviceWidth) {
     flex-direction: column;
 
-    .content-left {
-      width: 100vw;
+    .mobile-show-logo {
+      display: block;
+      position: relative;
+      margin: auto;
+      width: 30vw;
     }
+
+    .bigLogo {
+      width: 80vw;
+    }
+
     .content-right {
-      width: 100vw;
-      padding: 20px;
+      width: auto;
+
+      .smallLogo {
+        display: none;
+      }
     }
   }
 

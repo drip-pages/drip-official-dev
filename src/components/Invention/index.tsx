@@ -15,9 +15,8 @@ class Invention extends React.Component<InventionProps> {
         const { bigLogo, smallLogo, className, children } = this.props
         return (
             <div className={classNames('Invention', className)}>
-                <div className="content-left">
-                    <img className="bigLogo" src={bigLogo} alt="AROW" />
-                </div>
+                <img className="mobile-show-logo" src={smallLogo} alt="smallLogo" />
+                <img className="bigLogo" src={bigLogo} alt="AROW" />
                 <div className="content-right">
                     <img className="smallLogo" src={smallLogo} alt="AROW" />
                     { children }
