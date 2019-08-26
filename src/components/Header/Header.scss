@@ -1,97 +1,107 @@
 @import "../../utils/vars.scss";
 .Header {
-  .header-area {
-    position: sticky;
-    top: 0;
-    background-color: $colorWhite;
-    box-shadow: 0 1px 1px $colorShadow;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  .fixed-area {
+    position: fixed;
+    width: 100%;
+    z-index: $headerZ;
 
-    .header-logo {
-      min-width: 250px;
-      width: 500px;
-    }
+    .header-area {
+      background-color: $colorWhite;
+      box-shadow: 0 1px 1px $colorShadow;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
-    .menu-area {
-      margin-right: 20px;
-      white-space: nowrap;
+      .header-logo {
+        min-width: 250px;
+        width: 500px;
+      }
 
-      .native-button {
-        display: none;
+      .menu-area {
+        margin-right: 20px;
+        white-space: nowrap;
 
-        button {
-          display: inline-block;
-          padding: 0.5em 1em;
-          text-decoration: none;
-          border-radius: 3px;
+        .native-button {
+          display: none;
+
+          button {
+            display: inline-block;
+            padding: 0.5em 1em;
+            text-decoration: none;
+            border-radius: 3px;
+          }
+        }
+
+        .non-native-buttons {
+          button {
+            display: inline-block;
+            font-size: 16px;
+            margin: 5px;
+            padding: 0.3em 1em;
+            border: none;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
         }
       }
 
-      .non-native-buttons {
-        button {
-          display: inline-block;
-          font-size: 16px;
-          margin: 5px;
-          padding: 0.3em 1em;
-          border: none;
+      @media (max-width: $deviceWidth) {
+        .header-logo {
+          width: 500px;
+        }
 
-          &:hover {
-            text-decoration: underline;
+        .menu-area {
+          .native-button {
+            display: inline;
+          }
+
+          .non-native-buttons {
+            display: none;
           }
         }
       }
     }
 
-    @media (max-width: $deviceWidth) {
-      .header-logo {
-        width: 500px;
-      }
-
-      .menu-area {
-        .native-button {
-          display: inline;
-        }
-
-        .non-native-buttons {
-          display: none;
-        }
-      }
-    }
-  }
-
-  .underMenu {
-    position: absolute;
-    transition: 0.5s all;
-    visibility: hidden;
-    opacity: 0;
-    max-height: 0;
-    margin-top:2px;
-    width: 100%;
-    padding-left: 0;
-    background-color: $colorWhite;
-
-    li {
-      padding: 0.5em 5em;
-      list-style-type: none;
-      font-size: 16px;
-      border: 1px solid $colorGray;
-      width: 100%;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-
-    &.show {
+    .underMenu {
+      position: absolute;
       transition: 0.5s all;
-      visibility: visible;
-      opacity: 1;
-      max-height: 1000px;
+      visibility: hidden;
+      opacity: 0;
+      max-height: 0;
+      margin-top: 2px;
+      width: 100%;
+      padding-left: 0;
+      background-color: $colorWhite;
+
+      li {
+        padding: 0.5em 5em;
+        list-style-type: none;
+        font-size: 16px;
+        border: 1px solid $colorGray;
+        width: 100%;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      &.show {
+        transition: 0.5s all;
+        visibility: visible;
+        opacity: 1;
+        max-height: 1000px;
+      }
+    }
+
+    .item {
+      color: $colorBlack;
     }
   }
-  .item {
-    color: $colorBlack;
+
+  .padding-area {
+    display: block;
+    padding-top: 75px;
   }
 }
