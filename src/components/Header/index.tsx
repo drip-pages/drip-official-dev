@@ -1,8 +1,6 @@
 import React from 'react'
 import headerLogo from '../../img/navi.png'
 import './Header.scss'
-import Tabs from "@material-ui/core/Tabs";
-import Tab from "@material-ui/core/Tab";
 import classNames from "classnames";
 import {Link} from "react-router-dom";
 import HurgerButton from "../HurgerButton";
