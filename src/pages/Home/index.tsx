@@ -8,17 +8,26 @@ import ContactUs from '../../components/ContactUs'
 
 type HomeProps = {
     items: any[]
+    onInit: () => void
 }
 
-const Home = (props: HomeProps) => (
-    <div className="Home">
-        <TopLogo />
-        <Mission />
-        <News items={props.items}/>
-        <OurInvention/>
-        <Team />
-        <ContactUs />
-    </div>
-)
+class Home extends React.Component<HomeProps, {}> {
+    componentDidMount(): void {
+        this.props.onInit()
+    }
+
+    render() {
+        return (
+            <div className="Home">
+                <TopLogo />
+                <Mission />
+                <News items={this.props.items}/>
+                <OurInvention/>
+                <Team />
+                <ContactUs />
+            </div>
+        )
+    }
+}
 
 export default Home

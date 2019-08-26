@@ -5,21 +5,25 @@ import classNames from "classnames";
 import {Link} from "react-router-dom";
 import HurgerButton from "../HurgerButton";
 
-type HeaderState = {
+type HeaderProps = {
     showMenu: boolean,
+    onMenuButton: () => void,
+}
+
+type HeaderState = {
     value: number,
 }
-class Header extends React.Component<{}, HeaderState> {
+class Header extends React.Component<HeaderProps, HeaderState> {
     state ={
-        showMenu: false,
         value: 0,
     }
 
     handleMenuButton = () => {
-        this.state.showMenu ? this.setState({ showMenu: false },) : this.setState({ showMenu: true })
+        this.props.onMenuButton()
     }
 
     render() {
+        const { showMenu } = this.props
         return (
             <div className="Header">
                 <div className="fixed-area">
@@ -48,7 +52,7 @@ class Header extends React.Component<{}, HeaderState> {
                             </span>
                         </span>
                     </div>
-                    <ul className={classNames('underMenu', {show: this.state.showMenu})}>
+                    <ul className={classNames('underMenu', {show: showMenu})}>
                         <Link to="/news">
                             <li className="item">News</li>
                         </Link>
