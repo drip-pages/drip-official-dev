@@ -19,74 +19,54 @@ class Header extends React.Component<{}, HeaderState> {
         this.state.showMenu ? this.setState({ showMenu: false },) : this.setState({ showMenu: true })
     }
 
-    handleNewsButton = () => {
-
-    }
-
-    handleCompanyButton = () => {
-
-    }
-
-    handleContactButton = () => {
-
-    }
-
-    handleEnglishButton = () => {
-
-    }
-
     render() {
         return (
             <div className="Header">
-                <div className="header-area">
-                    <Link to="/">
-                        <img alt="DRECOM INVENTION PROJECT" src={headerLogo} className="header-logo"/>
-                    </Link>
-                    <span className="menu-area">
-                        <span className="native-button">
-                            <HurgerButton onClick={this.handleMenuButton} />
-                        </span>
+                <div className="fixed-area">
+                    <div className="header-area">
+                        <Link to="/">
+                            <img alt="DRECOM INVENTION PROJECT" src={headerLogo} className="header-logo"/>
+                        </Link>
+                        <span className="menu-area">
+                            <span className="native-button">
+                                <HurgerButton onClick={this.handleMenuButton} />
+                            </span>
 
-                        <span className="non-native-buttons">
-                            <Link to="/news">
-                                <button className="item"> News </button>
-                            </Link>
-                            <a href="https://www.drecom.co.jp/company/" target="_blank" rel="noopener noreferrer">
-                                <button className="item" onClick={this.handleCompanyButton}> Company </button>
-                            </a>
-                            <a href="https://goo.gl/forms/my00T6ZbZK" target="_blank" rel="noopener noreferrer">
-                                <button className="item" onClick={this.handleContactButton}> Contact </button>
-                            </a>
-                            <Link to="/English-Home">
-                                <button className="item" onClick={this.handleEnglishButton}> English </button>
-                            </Link>
+                            <span className="non-native-buttons">
+                                <Link to="/news">
+                                    <button className="item"> News </button>
+                                </Link>
+                                <a href="https://www.drecom.co.jp/company/" target="_blank" rel="noopener noreferrer">
+                                    <button className="item"> Company </button>
+                                </a>
+                                <a href="https://goo.gl/forms/my00T6ZbZK" target="_blank" rel="noopener noreferrer">
+                                    <button className="item"> Contact </button>
+                                </a>
+                                <Link to="/English-Home">
+                                    <button className="item"> English </button>
+                                </Link>
+                            </span>
                         </span>
-                    </span>
+                    </div>
+                    <ul className={classNames('underMenu', {show: this.state.showMenu})}>
+                        <Link to="/news">
+                            <li className="item">News</li>
+                        </Link>
+                        <a href="https://www.drecom.co.jp/company/" target="_blank" rel="noopener noreferrer">
+                            <li className="item">Company</li>
+                        </a>
+                        <a href="https://goo.gl/forms/my00T6ZbZK" target="_blank" rel="noopener noreferrer">
+                            <li className="item">Contact</li>
+                        </a>
+                        <Link to="/English-Home">
+                            <li className="item">English</li>
+                        </Link>
+                    </ul>
                 </div>
-                <ul className={classNames('underMenu', {show: this.state.showMenu})}>
-                    <Link to="/news">
-                        <li className="item">News</li>
-                    </Link>
-                    <a href="https://www.drecom.co.jp/company/" target="_blank" rel="noopener noreferrer">
-                        <li className="item" onClick={this.handleCompanyButton}>Company</li>
-                    </a>
-                    <a href="https://goo.gl/forms/my00T6ZbZK" target="_blank" rel="noopener noreferrer">
-                        <li className="item" onClick={this.handleContactButton}>Contact</li>
-                    </a>
-                    <Link to="/English-Home">
-                        <li className="item" onClick={this.handleEnglishButton}>English</li>
-                    </Link>
-                </ul>
+                <div className="padding-area" />
             </div>
         )
     }
 }
-
-// const a11yProps = (index: number) => {
-//     return {
-//         id: `simple-tab-${index}`,
-//         'aria-controls': `simple-tabpanel-${index}`,
-//     }
-// }
 
 export default Header
