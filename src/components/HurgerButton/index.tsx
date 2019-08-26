@@ -1,5 +1,4 @@
 import React from 'react'
-import classNames from 'classnames'
 import './HurgerButton.scss'
 import {ReactComponent as ThreeLine} from '../../img/threeLine.svg'
 import {ReactComponent as Batsu} from '../../img/batsu.svg'

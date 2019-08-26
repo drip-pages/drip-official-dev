@@ -13,18 +13,18 @@ const News = (props: NewsProps) => (
         </h2>
         <div className="content">
             <ul>
-            {
-                props.items.map((item) => (
-                    <li>
-                        {item.day}
-                        <strong>{item.title}</strong>
-                        <br />
-                        <a href={item.link} target="_blank" rel="noopener noreferrer">
-                            {item.message}
-                        </a>
-                    </li>
-                ))
-            }
+                {
+                    props.items.slice(0, 3).map((item) => (
+                        <li>
+                            {item.day}
+                            <strong>{item.title}</strong>
+                            <br/>
+                            <a href={item.link} target="_blank" rel="noopener noreferrer">
+                                {item.message}
+                            </a>
+                        </li>
+                    ))
+                }
             </ul>
         </div>
         <Link className="read-more" to="/news">Read More...</Link>
