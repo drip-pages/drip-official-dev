@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.scss';
 import {HashRouter, Switch, Route} from 'react-router-dom';
 import Header from "./components/Header";
@@ -9,13 +9,14 @@ import Footer from "./components/Footer";
 import NewsItems from './data/newsItems.json'
 
 function App() {
+    const [ show, setShow ] = useState(false)
   return (
     <div className="App">
         <HashRouter basename={process.env.PUBLIC_URL}>
-            <Header />
+            <Header  onMenuButton={() => { show ? setShow(false) : setShow(true) }} showMenu={show}/>
             <Switch>
-                <Route exact path='/' render={() => <Home items={NewsItems} /> } />
-                <Route path='/news' render={() => <News items={NewsItems} /> } />
+                <Route exact path='/' render={() => <Home items={NewsItems} onInit={() => setShow(false)}/> } />
+                <Route path='/news' render={() => <News items={NewsItems} onInit={() => setShow(false)} /> } />
                 <Route component={PageNotFound} />
             </Switch>
             <Footer />
