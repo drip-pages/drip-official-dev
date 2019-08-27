@@ -1,12 +1,12 @@
 declare module '../data/newsItems.json' {
-    interface INewsItem {
-        day: string
-        title: string
-        message: string
-        link: string
-    }
+  interface INewsItem {
+    day: string
+    title: string
+    message: string
+    link: string
+  }
 
-    const data: INewsItem
+  const data: INewsItem
 
-    export default data
+  export default data
 }
