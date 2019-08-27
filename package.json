@@ -22,7 +22,22 @@
     "eslint": "eslint './src/**/*.{ts,tsx}'"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "react-app",
+      "plugin:prettier/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "rules": {
+      "prettier/prettier": [
+        "error",
+        {
+          "printWidth": 120,
+          "semi": false,
+          "singleQuote": true,
+          "trailingComma": "es5"
+        }
+      ]
+    }
   },
   "browserslist": {
     "production": [
