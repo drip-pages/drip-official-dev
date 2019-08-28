@@ -1,6 +1,5 @@
 import * as React from 'react'
-import './News.scss'
-import NewsList from "../../components/NewsList";
+import NewsList from '../../components/NewsList'
 
 type NewsProps = {
   items: any[]
