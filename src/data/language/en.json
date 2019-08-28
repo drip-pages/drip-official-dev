@@ -1,3 +1,7 @@
 {
-  "topLogoMessage": "Keep Creating Seeds of Innovation!"
+  "topLogoMessage": "Keep Creating Seeds of Innovation!",
+  "headerButton": "日本語",
+  "inner": {
+    "inner2": "test"
+  }
 }

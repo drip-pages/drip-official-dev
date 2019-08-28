@@ -4,12 +4,12 @@ import translationJA from '../data/language/ja.json'
 import translationEN from '../data/language/en.json'
 
 const resources = {
-    en: {
-        translation: translationEN
-    },
-    ja: {
-        translation: translationJA
-    }
+  en: {
+    translation: translationEN,
+  },
+  ja: {
+    translation: translationJA,
+  },
 }
 i18n
   .use(initReactI18next) // passes i18n down to react-i18next
@@ -18,8 +18,6 @@ i18n
     lng: 'ja',
     fallbackLng: 'ja',
     whitelist: ['en', 'ja'],
-    // TODO: デバック終わったら外す
-    debug: true,
     keySeparator: false, // we do not use keys in form messages.welcome
 
     interpolation: {

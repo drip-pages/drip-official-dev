@@ -4,6 +4,8 @@ import './Header.scss'
 import classNames from 'classnames'
 import { Link } from 'react-router-dom'
 import HurgerButton from '../HurgerButton'
+import i18n from 'i18next'
+import {Trans, Translation} from 'react-i18next'
 
 type HeaderProps = {
   showMenu: boolean
@@ -46,9 +48,9 @@ class Header extends React.Component<HeaderProps, HeaderState> {
                 <a href="https://goo.gl/forms/my00T6ZbZK" target="_blank" rel="noopener noreferrer">
                   <button className="item"> Contact </button>
                 </a>
-                <Link to="/English-Home">
-                  <button className="item"> English </button>
-                </Link>
+                <button className="item" onClick={() => i18n.changeLanguage(i18n.language === 'en' ? 'ja' : 'en')}>
+                  <Translation>{t => t('headerButton')}</Translation>
+                </button>
               </span>
             </span>
           </div>

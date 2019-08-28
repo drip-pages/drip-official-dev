@@ -1,3 +1,7 @@
 {
-  "topLogoMessage": "発明の種を産み続ける"
+  "topLogoMessage": "発明の種を産み続ける",
+  "headerButton": "English",
+  "inner": {
+    "inner2": "test"
+  }
 }
