@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './App.scss'
-import { HashRouter, Switch, Route } from 'react-router-dom'
+import { Switch, Route, BrowserRouter } from 'react-router-dom'
 import Header from './components/Header'
 import Home from './pages/Home'
 import News from './pages/News'
@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <HelmetWrap />
-      <HashRouter basename={process.env.PUBLIC_URL}>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Header
           onMenuButton={() => {
             show ? setShow(false) : setShow(true)
@@ -27,7 +27,7 @@ function App() {
           <Route component={PageNotFound} />
         </Switch>
         <Footer />
-      </HashRouter>
+      </BrowserRouter>
     </div>
   )
 }
