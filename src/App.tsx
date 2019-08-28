@@ -14,7 +14,6 @@ function App() {
   return (
     <div className="App">
       <HelmetWrap />
-      {/*eslint no-undef: "error"*/}
       <HashRouter basename={process.env.PUBLIC_URL}>
         <Header
           onMenuButton={() => {
