@@ -1,29 +1,5 @@
 [
   {
-    "day": "2019/08/15",
-    "title": "AROW SDK ver.0.2.2",
-    "message": "AROW SDK ver.0.2.2にバージョンアップしました！",
-    "link": "https://arow.zendesk.com/hc/ja/articles/360032358271-AROW-SDK-ver-0-2-2"
-  },
-  {
-    "day": "2019/07/26",
-    "title": "朧の集いリリース",
-    "message": "朧の集いサイトリリース！",
-    "link": "https://oboro.fanmee.fan/about"
-  },
-  {
-    "day": "2019/07/11",
-    "title": "ダビコミュβリリース",
-    "message": "ダビマスコミュニティβサイトリリース！",
-    "link": "https://dabimas.fanmee.fan/"
-  },
-  {
-    "day": "2019/07/10",
-    "title": "AROWハンズオン〜はじめようマップゲーム開発〜",
-    "message": "AROWハンズオンを開催しました！",
-    "link": "https://arow-3dmap.connpass.com/event/136848/"
-  },
-  {
     "day": "2019/04/24",
     "title": "AROW",
     "message": "AROW Developer Meetup Vol.2 を開催しました！",
