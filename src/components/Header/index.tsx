@@ -5,7 +5,7 @@ import classNames from 'classnames'
 import { Link } from 'react-router-dom'
 import HurgerButton from '../HurgerButton'
 import i18n from 'i18next'
-import {Trans, Translation} from 'react-i18next'
+import { Translation } from 'react-i18next'
 
 type HeaderProps = {
   showMenu: boolean
