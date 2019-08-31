@@ -24,6 +24,10 @@ class Header extends React.Component<HeaderProps, HeaderState> {
     this.props.onMenuButton()
   }
 
+  handleTranslationButton = () => {
+    i18n.changeLanguage(i18n.language === 'en' ? 'ja' : 'en')
+  }
+
   render() {
     const { showMenu } = this.props
     return (
@@ -48,7 +52,7 @@ class Header extends React.Component<HeaderProps, HeaderState> {
                 <a href="https://goo.gl/forms/my00T6ZbZK" target="_blank" rel="noopener noreferrer">
                   <button className="item"> Contact </button>
                 </a>
-                <button className="item" onClick={() => i18n.changeLanguage(i18n.language === 'en' ? 'ja' : 'en')}>
+                <button className="item" onClick={this.handleTranslationButton}>
                   <Translation>{t => t('headerButton')}</Translation>
                 </button>
               </span>
@@ -64,9 +68,9 @@ class Header extends React.Component<HeaderProps, HeaderState> {
             <a href="https://goo.gl/forms/my00T6ZbZK" target="_blank" rel="noopener noreferrer">
               <li className="item">Contact</li>
             </a>
-            <Link to="/English-Home">
-              <li className="item">English</li>
-            </Link>
+            <li className="item" onClick={this.handleTranslationButton}>
+              <Translation>{t => t('headerButton')}</Translation>
+            </li>
           </ul>
         </div>
         <div className="padding-area" />
