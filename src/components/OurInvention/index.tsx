@@ -7,8 +7,10 @@ import pillarsSmallLogo from '../../img/pillarsSmall.png'
 import loveChainBigLogo from '../../img/lovechain.png'
 import loveCahinSmallLogo from '../../img/loveChainSmallLogo.png'
 import './OurInvention.scss'
+import { useTranslation } from 'react-i18next'
 
 const OurInvention = () => {
+  const { t } = useTranslation()
   return (
     <div className="OurInvention">
       <div className="our-invention-title-area">
