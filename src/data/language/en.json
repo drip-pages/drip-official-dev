@@ -12,5 +12,9 @@
   "inventionPillars_1": "The 6 pillars is a smart contract with ERC721 expanded features that anyone can generate and use on DApps.",
   "inventionLove_1": "This is a service where people can permanently stock memories and messages!",
   "inventionLove_2": "Storing messages on blockchain will permanently keep your memories intact. Save your precious memories for two on blockchain.",
-  "teamMessage": "We work Cheerfully, for Fun but Straight to the goal!"
+  "teamMessage": "We work Cheerfully, for Fun but Straight to the goal!",
+  "contactMediaMessage": "Waiting for press interviews!",
+  "contactPartnerMessage": "Let's work together to create something new!",
+  "contactRecruitMessage": "We're looking for like-minded and enthusiastic people!",
+  "contactButton": "Contact us"
 }
