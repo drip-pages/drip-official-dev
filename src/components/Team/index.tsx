@@ -17,22 +17,26 @@ import tk from '../../img/tk.jpeg'
 import tkAni from '../../img/tk-ani.png'
 import owner from '../../img/owner.jpg'
 import ownerAni from '../../img/owner-ani.png'
+import { useTranslation } from 'react-i18next'
 
-const Team = () => (
-  <div className="Team">
-    <h2>Team</h2>
-    <p>楽しく、やんちゃに、がむしゃらに</p>
-    <div className="member-area">
-      <Member className="member-icon" imgFile={naito} movieFile={naitoAni} name="Producer" />
-      <Member className="member-icon" imgFile={pay} movieFile={payAni} name="Planner" />
-      <Member className="member-icon" imgFile={neco} movieFile={necoAni} name="Director" />
-      <Member className="member-icon" imgFile={ogw} movieFile={ogwAni} name="Engineer" />
-      <Member className="member-icon" imgFile={master} movieFile={masterAni} name="Master" />
-      <Member className="member-icon" imgFile={pieer} movieFile={pieerAni} name="Engineer & Planner" />
-      <Member className="member-icon" imgFile={tk} movieFile={tkAni} name="Engineer" />
-      <Member className="member-icon" imgFile={owner} movieFile={ownerAni} name="Engineer" />
+const Team = () => {
+  const { t } = useTranslation()
+  return (
+    <div className="Team">
+      <h2>Team</h2>
+      <p>{t('teamMessage')}</p>
+      <div className="member-area">
+        <Member className="member-icon" imgFile={naito} movieFile={naitoAni} name="Producer" />
+        <Member className="member-icon" imgFile={pay} movieFile={payAni} name="Planner" />
+        <Member className="member-icon" imgFile={neco} movieFile={necoAni} name="Director" />
+        <Member className="member-icon" imgFile={ogw} movieFile={ogwAni} name="Engineer" />
+        <Member className="member-icon" imgFile={master} movieFile={masterAni} name="Master" />
+        <Member className="member-icon" imgFile={pieer} movieFile={pieerAni} name="Engineer & Planner" />
+        <Member className="member-icon" imgFile={tk} movieFile={tkAni} name="Engineer" />
+        <Member className="member-icon" imgFile={owner} movieFile={ownerAni} name="Engineer" />
+      </div>
     </div>
-  </div>
-)
+  )
+}
 
 export default Team
