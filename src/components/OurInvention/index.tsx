@@ -8,14 +8,15 @@ import loveChainBigLogo from '../../img/lovechain.png'
 import loveCahinSmallLogo from '../../img/loveChainSmallLogo.png'
 import './OurInvention.scss'
 import { useTranslation } from 'react-i18next'
+import Slide from '../Slide'
 
 const OurInvention = () => {
   const { t } = useTranslation()
   return (
     <div className="OurInvention">
-      <div className="our-invention-title-area">
+      <Slide className="our-invention-title-area">
         <h2>Our invention</h2>
-      </div>
+      </Slide>
       <Invention className="arow" bigLogo={arowBigLogo} smallLogo={arowSmallLogo}>
         <p>{t('inventionArow_1')}</p>
         <p>{t('inventionArow_2')}</p>
@@ -31,9 +32,7 @@ const OurInvention = () => {
       </Invention>
       <Invention className="loveChain" bigLogo={loveChainBigLogo} smallLogo={loveCahinSmallLogo}>
         <strong>{t('inventionLove_1')}</strong>
-        <p>
-          {t('inventionLove_2')}
-        </p>
+        <p>{t('inventionLove_2')}</p>
         <a href="https://lovechain.ooo/" target="_blank" rel="noopener noreferrer">
           https://lovechain.ooo/
         </a>
