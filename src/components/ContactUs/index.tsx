@@ -1,11 +1,12 @@
 import * as React from 'react'
 import './ContactUs.scss'
 import { useTranslation } from 'react-i18next'
+import Slide from '../Slide'
 
 const ContactUs = () => {
   const { t } = useTranslation()
   return (
-    <div className="ContactUs">
+    <Slide className="ContactUs">
       <h2>Contact us!</h2>
       <div className="contents">
         <div className="label">Media</div>
@@ -28,7 +29,7 @@ const ContactUs = () => {
       <a href="https://goo.gl/forms/my00T6ZbZK" target="_blank" rel="noopener noreferrer">
         <button className="contact-button">{t('contactButton')}</button>
       </a>
-    </div>
+    </Slide>
   )
 }
 
