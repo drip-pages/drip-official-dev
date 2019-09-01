@@ -1,8 +1,10 @@
 @import "../../utils/vars.scss";
 .Header {
+  position: relative;
   .fixed-area {
     position: fixed;
     width: 100%;
+    left: auto;
     z-index: $headerZ;
 
     .header-area {
@@ -12,13 +14,13 @@
       grid-template-columns: 1fr 380px;
 
       .header-logo {
-        width: 500px;
+        height: 50px;
       }
 
       .menu-area {
         margin: auto;
         white-space: nowrap;
-
+        grid-column: 2;
 
         .native-button {
           display: none;
@@ -32,6 +34,8 @@
         }
 
         .non-native-buttons {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
           button {
             display: inline-block;
             font-size: 16px;
@@ -47,11 +51,14 @@
       }
     }
 
-    @media (max-width: $deviceWidth) {
+    @media (max-width: $changeHeaderButtonWidth) {
       .header-area {
-        grid-template-columns: 1fr 60px;
+        grid-template-columns: 1fr 80px;
         .header-logo {
-          width: 500px;
+          width: 100%;
+          height: auto;
+          max-width: 425px;
+          max-height: 50px;
         }
         .menu-area {
           .native-button {
