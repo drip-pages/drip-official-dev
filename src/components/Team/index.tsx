@@ -18,11 +18,12 @@ import tkAni from '../../img/tk-ani.png'
 import owner from '../../img/owner.jpg'
 import ownerAni from '../../img/owner-ani.png'
 import { useTranslation } from 'react-i18next'
+import Slide from '../Slide'
 
 const Team = () => {
   const { t } = useTranslation()
   return (
-    <div className="Team">
+    <Slide className="Team">
       <h2>Team</h2>
       <p>{t('teamMessage')}</p>
       <div className="member-area">
@@ -35,7 +36,7 @@ const Team = () => {
         <Member className="member-icon" imgFile={tk} movieFile={tkAni} name="Engineer" />
         <Member className="member-icon" imgFile={owner} movieFile={ownerAni} name="Engineer" />
       </div>
-    </div>
+    </Slide>
   )
 }
 

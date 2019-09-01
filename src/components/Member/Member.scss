@@ -1,7 +1,13 @@
+@import "../../utils/vars.scss";
 .Member {
   width: 200px;
   position: relative;
   p {
     text-align: center;
+  }
+}
+@media (max-width: $deviceWidth) {
+  .Member {
+    width: 20vw;
   }
 }
