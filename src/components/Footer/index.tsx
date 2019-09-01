@@ -3,7 +3,7 @@ import './Footer.scss'
 import drecomLogo from '../../img/drecom.png'
 import facebookIcon from '../../img/fb.png'
 import twitterIcon from '../../img/tw.png'
-import Slide from '../Slide';
+import Slide from '../Slide'
 
 const Footer = () => (
   <Slide className="Footer">

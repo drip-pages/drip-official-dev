@@ -6,8 +6,8 @@ type NewsListProps = {
 }
 const NewsList = (props: NewsListProps) => (
   <ul className="NewsList">
-    {props.items.map(item => (
-      <li>
+    {props.items.map((item, index) => (
+      <li key={index}>
         {item.day}
         <strong>{item.title}</strong>
         <br />
