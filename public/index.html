@@ -12,21 +12,61 @@
     </script>
     <script async src='https://www.google-analytics.com/analytics.js'></script>
     <!-- End Google Analytics -->
-    <!-- icon setting -->
+    <link href="./index.css" rel="stylesheet">
+    <script src="//assets.peraichi.com/js/const_common.js"></script>
+    <script src="//assets.peraichi.com/js/const_production.js"></script>
+    <script src="//webfont.fontplus.jp/accessor/script/fontplus.js?5qoPx6QyJ8k%3D&aa=1" charset="utf-8"></script>
+    <script src="//static.quant.jp/lait.js" data-lait="on" data-sid="2bad96c669fe37b88a24137c4092b472" data-tag-version="1.0.0" defer async></script>
     <link rel="icon" href="./icon.png">
-
     <!-- React bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
-
     <!-- material-ui -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-
-    <!-- google meta tag -->
     <meta name="google-site-verification" content="DiVJITwzspckWL-55HV3XHXgyJMVab7I2wQGy_OUokM">
+    <link rel="stylesheet" href="./style.css">
+    <link rel=preload as=image href="img/naito-ani.gif" media="screen and (min-width: 770px)">
+    <link rel=preload as=image href="img/neco-ani.gif" media="screen and (min-width: 770px)">
+    <link rel=preload as=image href="img/mega-ani.gif" media="screen and (min-width: 770px)">
+    <link rel=preload as=image href="img/police-ani.gif" media="screen and (min-width: 770px)">
+    <link rel=preload as=image href="img/master-ani.gif" media="screen and (min-width: 770px)">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+    <script>
+      $(function() {
+        $('#section-17 .e_btn').append(
+                '<p class="e_btn_android"><a href="https://play.google.com/store/apps/details?id=jp.co.drecom.pass&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1" class="btn btn-primary pera1-editable pera1-removable" target="_blank">button</a></p>'
+        );
+      });
+    </script>
+    <script type="text/javascript" src="js/lazysizes.min.js"></script>
+    <script type="text/javascript" src="js/lazyLoad.js"></script>
+    <script type="text/javascript" src="js/peraichi_setting.js"></script>
   </head>
   <body>
   <noscript>このWebサイトを表示するためにはJavaScriptを有効にする必要があります。 ご利用になる場合はJavaScriptを有効にしてください。</noscript>
+  <!-- for analytics -->
+  <script id="dataPtengineScript" type="text/javascript" data-id="4e9b0eea">
+    window._pt_lt = new Date().getTime();
+    window._pt_sp_2 = [];
+    _pt_sp_2.push('setAccount,4e9b0eea');
+    const _protocol = (("https:" === document.location.protocol) ? " https://" : " http://");
+    (function() {
+      const atag = document.createElement('script');
+      atag.type = 'text/javascript';
+      atag.async = true;
+      atag.src = _protocol + 'js.ptengine.jp/pta.js';
+      const stag = document.createElement('script');
+      stag.type = 'text/javascript';
+      stag.async = true;
+      stag.src = _protocol + 'js.ptengine.jp/pts.js';
+      const s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(atag, s);
+      s.parentNode.insertBefore(stag, s);
+    })();
+  </script>
+  <!-- for analytics (end) -->
 
   <div id="root"></div>
     <!--
