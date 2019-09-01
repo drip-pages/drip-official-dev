@@ -1,11 +1,12 @@
 import * as React from 'react'
 import './Mission.scss'
 import { useTranslation } from 'react-i18next'
+import Slide from '../Slide'
 
 const Mission = () => {
   const { t } = useTranslation()
   return (
-    <div className="Mission">
+    <Slide className="Mission">
       <h2>The goal of this project</h2>
       <div className="content">
         <p>{t('missionContent_1')}</p>
@@ -18,7 +19,7 @@ const Mission = () => {
         <br />
         <p>{t('missionContent_6')}</p>
       </div>
-    </div>
+    </Slide>
   )
 }
 
