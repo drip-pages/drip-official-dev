@@ -18,10 +18,8 @@ class Invention extends React.Component<InventionProps> {
       <Slide className={classNames('Invention', className)}>
         <img className="mobile-show-logo" src={smallLogo} alt="smallLogo" />
         <img className="bigLogo" src={bigLogo} alt="AROW" />
-        <div className="content-right">
-          <img className="smallLogo" src={smallLogo} alt="AROW" />
-          {children}
-        </div>
+        <img className="smallLogo" src={smallLogo} alt="AROW" />
+        <div className="content-area">{children}</div>
       </Slide>
     )
   }
