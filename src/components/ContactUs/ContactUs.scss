@@ -38,8 +38,9 @@
 
   @media (max-width: $deviceWidth) {
     .contents {
-      font-size: 12px;
+      font-size: 16px;
       text-align: center;
+      white-space: normal;
       .label {
         font-size: 16px;
         font-weight: bold;
