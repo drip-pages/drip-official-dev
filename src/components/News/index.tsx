@@ -2,13 +2,14 @@ import * as React from 'react'
 import { Link } from 'react-router-dom'
 import './News.scss'
 import NewsList from '../NewsList'
+import Slide from '../Slide'
 
 type NewsProps = {
   items: any[]
 }
 
 const News = (props: NewsProps) => (
-  <div className="News">
+  <Slide className="News">
     <h2>News</h2>
     <div className="content">
       <NewsList items={props.items.slice(0, 3)} />
@@ -16,7 +17,7 @@ const News = (props: NewsProps) => (
     <Link className="read-more" to="/news">
       Read More...
     </Link>
-  </div>
+  </Slide>
 )
 
 export default News
