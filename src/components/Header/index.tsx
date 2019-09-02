@@ -44,7 +44,7 @@ class Header extends React.Component<HeaderProps, HeaderState> {
             </Link>
             <span className="menu-area">
               <span className="native-button">
-                <HurgerButton onClick={this.handleMenuButton} />
+                <HurgerButton onClick={this.handleMenuButton} show={showMenu} />
               </span>
 
               <span className="non-native-buttons">
