@@ -16,7 +16,7 @@ function App() {
       <HelmetWrap />
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Header
-          onMenuButton={() => {
+          toogleShowAccordionMenu={() => {
             show ? setShow(false) : setShow(true)
           }}
           showMenu={show}

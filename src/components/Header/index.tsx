@@ -9,7 +9,7 @@ import { Translation } from 'react-i18next'
 
 type HeaderProps = {
   showMenu: boolean
-  onMenuButton: () => void
+  toogleShowAccordionMenu: () => void
 }
 
 type HeaderState = {
@@ -21,7 +21,12 @@ class Header extends React.Component<HeaderProps, HeaderState> {
   }
 
   handleMenuButton = () => {
-    this.props.onMenuButton()
+    this.props.toogleShowAccordionMenu()
+  }
+
+  hadleAccordionMenuTranslationButton = () => {
+    this.props.toogleShowAccordionMenu()
+    i18n.changeLanguage(i18n.language === 'en' ? 'ja' : 'en')
   }
 
   handleTranslationButton = () => {
@@ -68,7 +73,7 @@ class Header extends React.Component<HeaderProps, HeaderState> {
             <a href="https://goo.gl/forms/my00T6ZbZK" target="_blank" rel="noopener noreferrer">
               <li className="item">Contact</li>
             </a>
-            <li className="item" onClick={this.handleTranslationButton}>
+            <li className="item" onClick={this.hadleAccordionMenuTranslationButton}>
               <Translation>{t => t('headerButton')}</Translation>
             </li>
           </ul>
