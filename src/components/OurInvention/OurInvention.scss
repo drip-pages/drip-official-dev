@@ -8,11 +8,29 @@
   .arow {
     background-color: $colorBlack;
     color: $colorWhite;
+
+    @media (min-width: $deviceWidth) {
+      .smallLogo {
+        margin-top: 30px;
+      }
+    }
   }
 
   .pillars {
     background-image: url("../../img/6-pillars_background.png");
     background-size: cover;
+    @media (min-width: $deviceWidth) {
+      .bigLogo {
+        width: 25vw;
+      }
+      .content-area {
+        padding-left: 40px;
+
+        .smallLogo {
+          margin-top: 30px;
+        }
+      }
+    }
   }
 
   .loveChain {
@@ -21,10 +39,29 @@
     a {
       color: $colorWhite;
     }
+    strong {
+      margin-top: 1em;
+      font-size: 25px;
+    }
+
+    @media (min-width: $deviceWidth) {
+      padding: 50px 50px 50px 10px;
+      .bigLogo {
+        width: 50vw;
+      }
+      .content-area {
+        padding-left: 40px;
+
+        .smallLogo {
+          margin-top: 10px;
+        }
+      }
+    }
   }
 
   p {
-    font-size: 16px;
+    margin: 1em 0;
+    font-size: 18px;
   }
 
   @media (max-width: $deviceWidth) {
