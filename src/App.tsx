@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, {useEffect, useState} from 'react'
 import './App.scss'
 import { Switch, Route, BrowserRouter } from 'react-router-dom'
 import Header from './components/Header'
@@ -22,8 +22,31 @@ function App() {
           showMenu={show}
         />
         <Switch>
-          <Route exact path="/" render={() => <Home items={NewsItems} onInit={() => setShow(false)} />} />
-          <Route path="/news" render={() => <News items={NewsItems} onInit={() => setShow(false)} />} />
+          <Route
+            exact
+            path="/"
+            render={() => (
+              <Home
+                items={NewsItems}
+                onInit={() => {
+                  setShow(false)
+                  window.scrollTo(0, 0)
+                }}
+              />
+            )}
+          />
+          <Route
+            path="/news"
+            render={() => (
+              <News
+                items={NewsItems}
+                onInit={() => {
+                  setShow(false)
+                  window.scrollTo(0, 0)
+                }}
+              />
+            )}
+          />
           <Route component={PageNotFound} />
         </Switch>
         <Footer />
