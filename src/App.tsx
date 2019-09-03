@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, { useState } from 'react'
 import './App.scss'
 import { Switch, Route, BrowserRouter } from 'react-router-dom'
 import Header from './components/Header'
@@ -8,6 +8,7 @@ import PageNotFound from './pages/PageNotFound'
 import Footer from './components/Footer'
 import NewsItems from './data/newsItems.json'
 import HelmetWrap from './components/HelmetWrap'
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   const [show, setShow] = useState(false)
@@ -15,41 +16,20 @@ function App() {
     <div className="App">
       <HelmetWrap />
       <BrowserRouter basename={process.env.PUBLIC_URL}>
-        <Header
-          toogleShowAccordionMenu={() => {
-            show ? setShow(false) : setShow(true)
-          }}
-          showMenu={show}
-        />
-        <Switch>
-          <Route
-            exact
-            path="/"
-            render={() => (
-              <Home
-                items={NewsItems}
-                onInit={() => {
-                  setShow(false)
-                  window.scrollTo(0, 0)
-                }}
-              />
-            )}
+        <ScrollToTop>
+          <Header
+            toogleShowAccordionMenu={() => {
+              show ? setShow(false) : setShow(true)
+            }}
+            showMenu={show}
           />
-          <Route
-            path="/news"
-            render={() => (
-              <News
-                items={NewsItems}
-                onInit={() => {
-                  setShow(false)
-                  window.scrollTo(0, 0)
-                }}
-              />
-            )}
-          />
-          <Route component={PageNotFound} />
-        </Switch>
-        <Footer />
+          <Switch>
+            <Route exact path="/" render={() => <Home items={NewsItems} onInit={() => setShow(false)} />} />
+            <Route path="/news" render={() => <News items={NewsItems} onInit={() => setShow(false)} />} />
+            <Route component={PageNotFound} />
+          </Switch>
+          <Footer />
+        </ScrollToTop>
       </BrowserRouter>
     </div>
   )
