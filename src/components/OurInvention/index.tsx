@@ -19,7 +19,6 @@ const OurInvention = () => {
       </Slide>
       <Invention className="arow" bigLogo={arowBigLogo} smallLogo={arowSmallLogo}>
         <p>{t('inventionArow_1')}</p>
-        <p>{t('inventionArow_2')}</p>
         <a href="https://arow.world/" target="_blank" rel="noopener noreferrer">
           https://arow.world/
         </a>
