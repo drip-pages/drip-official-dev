@@ -1,3 +1,4 @@
+@import "../../utils/vars.scss";
 .Team {
   p {
     text-align: center;
@@ -10,6 +11,9 @@
 
     .member-icon {
       margin: 10px;
+    }
+    @media (max-width: $deviceWidth) {
+      flex-direction: column;
     }
   }
 }
