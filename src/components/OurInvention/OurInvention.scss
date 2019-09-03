@@ -10,6 +10,10 @@
     color: $colorWhite;
 
     @media (min-width: $deviceWidth) {
+      .bigLogo {
+        margin-right: 9vw;
+        margin-left: auto;
+      }
       .smallLogo {
         margin-top: 30px;
       }
@@ -21,14 +25,11 @@
     background-size: cover;
     @media (min-width: $deviceWidth) {
       .bigLogo {
-        width: 25vw;
+        margin-right: 9vw;
+        margin-left: auto;
       }
-      .content-area {
-        padding-left: 40px;
-
-        .smallLogo {
-          margin-top: 30px;
-        }
+      .smallLogo {
+        margin-top: 30px;
       }
     }
   }
@@ -45,13 +46,10 @@
     }
 
     @media (min-width: $deviceWidth) {
-      padding: 50px 50px 50px 10px;
       .bigLogo {
-        width: 50vw;
+        width: 40vw;
       }
       .content-area {
-        padding-left: 40px;
-
         .smallLogo {
           margin-top: 10px;
         }
@@ -61,7 +59,7 @@
 
   p {
     margin: 1em 0;
-    font-size: 18px;
+    font-size: 20px;
   }
 
   @media (max-width: $deviceWidth) {
