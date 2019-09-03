@@ -8,6 +8,7 @@ import PageNotFound from './pages/PageNotFound'
 import Footer from './components/Footer'
 import NewsItems from './data/newsItems.json'
 import HelmetWrap from './components/HelmetWrap'
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   const [show, setShow] = useState(false)
@@ -15,18 +16,20 @@ function App() {
     <div className="App">
       <HelmetWrap />
       <BrowserRouter basename={process.env.PUBLIC_URL}>
-        <Header
-          toogleShowAccordionMenu={() => {
-            show ? setShow(false) : setShow(true)
-          }}
-          showMenu={show}
-        />
-        <Switch>
-          <Route exact path="/" render={() => <Home items={NewsItems} onInit={() => setShow(false)} />} />
-          <Route path="/news" render={() => <News items={NewsItems} onInit={() => setShow(false)} />} />
-          <Route component={PageNotFound} />
-        </Switch>
-        <Footer />
+        <ScrollToTop>
+          <Header
+            toogleShowAccordionMenu={() => {
+              show ? setShow(false) : setShow(true)
+            }}
+            showMenu={show}
+          />
+          <Switch>
+            <Route exact path="/" render={() => <Home items={NewsItems} onInit={() => setShow(false)} />} />
+            <Route path="/news" render={() => <News items={NewsItems} onInit={() => setShow(false)} />} />
+            <Route component={PageNotFound} />
+          </Switch>
+          <Footer />
+        </ScrollToTop>
       </BrowserRouter>
     </div>
   )
