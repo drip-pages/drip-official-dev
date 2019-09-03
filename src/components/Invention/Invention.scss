@@ -8,7 +8,7 @@
   }
   .bigLogo {
     grid-area: bigLogo;
-    width: 30vw;
+    width: 25vw;
     position: relative;
     margin: auto;
   }
@@ -46,12 +46,11 @@
       width: 75vw;
     }
 
-    .smallLogo {
-      display: none;
-    }
-
     .content-area {
       width: auto;
+      .smallLogo {
+        display: none;
+      }
     }
   }
 
