@@ -1,6 +1,13 @@
 .Member {
   width: 240px;
   position: relative;
+
+  .member-image {
+    max-width: 100%;
+    height: auto;
+    border: 0;
+    box-sizing: border-box;
+  }
   p {
     text-align: center;
   }
